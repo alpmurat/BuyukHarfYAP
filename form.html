@@ -1,3 +1,28 @@
+
+
+<script>
+    
+    
+    String.prototype.buyukHarf=function() {
+
+var str = [];
+for(var i = 0; i < this.length; i++) {
+var ch = this.charCodeAt(i);
+var c = this.charAt(i);
+if(ch == 105) str.push('İ');
+else if(ch == 305) str.push('I');
+else if(ch == 287) str.push('Ğ');
+else if(ch == 252) str.push('Ü');
+else if(ch == 351) str.push('Ş');
+else if(ch == 246) str.push('Ö');
+else if(ch == 231) str.push('Ç');
+else if(ch >= 97 && ch <= 122) str.push(c.toUpperCase());
+else str.push(c);
+}
+return str.join('');
+}
+</script>
+
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
